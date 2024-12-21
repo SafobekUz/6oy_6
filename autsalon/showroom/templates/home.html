@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutSalon</title>
+</head>
+<body>
+    <h1>Brands</h1>
+    <ul>
+        {% for brand in brands %}
+            <li><a href="{% url 'brand_cars' brand.id %}">{{ brand.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h1>Cars</h1>
+    <ul>
+        {% for car in cars %}
+            <li><a href="{% url 'car_detail' car.id %}">{{ car.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
